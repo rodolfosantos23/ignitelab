@@ -1,11 +1,11 @@
-import {
-  CaretRight,
-  DiscordLogo,
-  FileArrowDown,
-  Lightning,
-} from "phosphor-react";
+import { DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+
+import { DefaultUi, Player, Youtube } from "@vime/react";
 import { Button } from "./Button";
 import { LargeLink } from "./LargeLink";
+
+// Importa o css padrão do vídeo
+import "@vime/core/themes/default.css";
 
 export function Video() {
   return (
@@ -13,7 +13,11 @@ export function Video() {
       {/* Video */}
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
-          Video
+          <Player>
+            <Youtube videoId="KJj70dBgRPo" />
+            {/* Controles padrões do vídeo */}
+            <DefaultUi />
+          </Player>
         </div>
       </div>
 
